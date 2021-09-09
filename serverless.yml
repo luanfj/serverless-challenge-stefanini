@@ -1,13 +1,19 @@
-service: sls-typescript-rest-api-with-dynamodb
+org: zenjix
+app: stefanini-challenge
+service: stefanini-challenge
 
-frameworkVersion: ">=1.1.0 <2.0.0"
+custom:
+  tableName: "users-table-${self:provider.stage}"
 
+plugins:
+  - serverless-plugin-typescript
 provider:
   name: aws
   runtime: nodejs12.x
-  region: eu-west-2
+  lambdaHashingVersion: '20201221'
+  stage: dev
   environment:
-    DYNAMODB_TABLE: ${self:service}-${opt:stage, self:provider.stage}
+    USERS_TABLE: ${self:custom.tableName}
   iamRoleStatements:
     - Effect: Allow
       Action:
@@ -17,7 +23,8 @@ provider:
         - dynamodb:PutItem
         - dynamodb:UpdateItem
         - dynamodb:DeleteItem
-      Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.DYNAMODB_TABLE}"
+      Resource:
+        - Fn::GetAtt: [UsersTable, Arn]
 
 functions:
   api:
@@ -34,7 +41,6 @@ resources:
   Resources:
     UsersTable:
       Type: 'AWS::DynamoDB::Table'
-      DeletionPolicy: Retain
       Properties:
         AttributeDefinitions:
           - AttributeName: id
