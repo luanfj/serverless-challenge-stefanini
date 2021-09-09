@@ -20,29 +20,29 @@ provider:
       Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.DYNAMODB_TABLE}"
 
 functions:
-  createUser:
-    handler: src/users/create.createUser
+  api:
+    handler: src/handler.handler
     events:
       - http:
-          path: users
-          method: post
-          cors: true
+          path: /
+          method: ANY
+      - http:
+          path: /{proxy+}
+          method: ANY
 
 resources:
   Resources:
-    TodosDynamoDbTable:
+    UsersTable:
       Type: 'AWS::DynamoDB::Table'
       DeletionPolicy: Retain
       Properties:
         AttributeDefinitions:
-          -
-            AttributeName: id
+          - AttributeName: id
             AttributeType: S
         KeySchema:
-          -
-            AttributeName: id
+          - AttributeName: id
             KeyType: HASH
         ProvisionedThroughput:
           ReadCapacityUnits: 1
           WriteCapacityUnits: 1
-        TableName: ${self:provider.environment.DYNAMODB_TABLE}
+        TableName: ${self:custom.tableName}
