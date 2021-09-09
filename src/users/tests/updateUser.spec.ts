@@ -1,5 +1,5 @@
-import CreateUserService from './createUser.service'
-import UpdateUserService from './updateUser.service'
+import CreateUserService from '../services/createUser.service'
+import UpdateUserService from '../services/updateUser.service'
 
 let createUser: CreateUserService
 let updateUser: UpdateUserService

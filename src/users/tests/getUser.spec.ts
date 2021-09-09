@@ -1,6 +1,6 @@
 import AppError from '../../utils/AppError'
-import CreateUserService from './createUser.service'
-import GetUserService from './getUser.service'
+import CreateUserService from '../services/createUser.service'
+import GetUserService from '../services/getUser.service'
 
 let createUser: CreateUserService
 let getUser: GetUserService

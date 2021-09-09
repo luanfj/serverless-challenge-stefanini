@@ -1,4 +1,4 @@
-import CreateUserService from './createUser.service'
+import CreateUserService from '../services/createUser.service'
 
 let createUser: CreateUserService
 

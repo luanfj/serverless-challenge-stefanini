@@ -1,5 +1,5 @@
-import CreateUserService from './createUser.service'
-import ListUsersService from './listUsers.service'
+import CreateUserService from '../services/createUser.service'
+import ListUsersService from '../services/listUsers.service'
 
 let createUser: CreateUserService
 let listUser: ListUsersService

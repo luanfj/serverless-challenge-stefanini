@@ -1,6 +1,6 @@
 import AppError from '../../utils/AppError'
-import CreateUserService from './createUser.service'
-import DeleteUserService from './deleteUser.service'
+import CreateUserService from '../services/createUser.service'
+import DeleteUserService from '../services/deleteUser.service'
 
 import dynamoDbClient from '../../utils/dynamoDb'
 
