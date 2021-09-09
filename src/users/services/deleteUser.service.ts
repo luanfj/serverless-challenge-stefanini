@@ -3,7 +3,7 @@ import AppError from '../../utils/AppError'
 import dynamoDbClient from '../../utils/dynamoDb'
 
 export default class DeleteUserService {
-  public async execute(userId: string) {
+  public async execute(userId: string): Promise<void> {
     const params = {
       TableName: process.env.USERS_TABLE,
       Key: {

@@ -3,9 +3,10 @@ import AppError from '../../utils/AppError'
 import { IUpdateUserDTO } from '../dtos/updateUser.dto'
 
 import dynamoDbClient from '../../utils/dynamoDb'
+import { IUser } from '../interfaces/user.interface'
 
 export default class UpdateUserService {
-  public async execute(userData: IUpdateUserDTO) {
+  public async execute(userData: IUpdateUserDTO): Promise<IUser> {
     const { Item: userExists } = await dynamoDbClient
       .get({
         TableName: process.env.USERS_TABLE,
@@ -37,6 +38,6 @@ export default class UpdateUserService {
       })
       .promise()
 
-    return data.Attributes
+    return data.Attributes as IUser
   }
 }

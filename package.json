@@ -2,7 +2,8 @@
   "name": "stefanini-challenge",
   "version": "0.0.0",
   "scripts": {
-    "deploy:dev": "sls deploy"
+    "deploy:dev": "sls deploy",
+    "test": "jest"
   },
   "license": "ISC",
   "devDependencies": {
