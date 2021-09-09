@@ -1,5 +1,5 @@
 import { Response, Request } from 'express'
-import AppError from '../../../utils/AppError'
+import AppError from '../../utils/AppError'
 import * as yup from 'yup'
 
 import CreateUserService from '../services/createUser.service'
