@@ -16,7 +16,7 @@ O desafio que propomos é provisionar uma infraestrutura na AWS, em que se tenha
  7. Os recursos podem ser provisionados por serveless framework ou terraform.
  8. Realizar testes unitário com JEST.
 
- ### Requisitos
+ ### Requisitos instalação
 
 - [Node.js](https://nodejs.org/en/)
 - [Yarn](https://classic.yarnpkg.com/) ou [npm](https://www.npmjs.com/)
