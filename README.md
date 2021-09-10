@@ -51,7 +51,7 @@ $ serverless deploy
 
 ### Estrutura do projeto
 
-A estrutura deste projeto não segue à risca o modelo proposto por Uncle Bob [Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html), porém se baseia em um modelo parecido.
+A estrutura deste projeto não segue à risca o modelo proposto por Uncle Bob [Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html), porém se baseia em um modelo um pouco similar.
 
 ```
 src
