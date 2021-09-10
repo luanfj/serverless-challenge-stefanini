@@ -55,16 +55,16 @@ A estrutura deste projeto não segue à risca o modelo proposto por Uncle Bob [C
 
 ```
 src
- └ users                              → Módulo de usuários
-    └ controller                      → Handlers para as rotas
-    └ dtos                            → Interfaces Transfer Object para manter o padrão na transferência de dados
-    └ interfaces                      → Tipagem para objetos dentro do módulo
-    └ routes                          → Direcionamento das rotas do módulo
-    └ services                        → Regras de negócio do módulo
-    └ tests                           → Pasta para testes unitários ou funcionais
-  └ utils                             → Funções gerais utilizadas em diferentes serviços ou módulos
-  └ handler.ts                        → Ponto de entrada da aplicação
-  └ routes                            → Direcionador de rotas gerais (note que temos as rotas específicas de cada módulo e as rotas principais)
+ └ users            → Módulo de usuários
+    └ controller    → Handlers para as rotas
+    └ dtos          → Interfaces Transfer Object para manter o padrão na transferência de dados
+    └ interfaces    → Tipagem para objetos dentro do módulo
+    └ routes        → Direcionamento das rotas do módulo
+    └ services      → Regras de negócio do módulo
+    └ tests         → Pasta para testes unitários ou funcionais
+  └ utils           → Funções gerais utilizadas em diferentes serviços ou módulos
+  └ handler.ts      → Ponto de entrada da aplicação
+  └ routes          → Direcionador de rotas gerais (note que temos as rotas específicas de cada módulo e as rotas principais)
 ```
 
 ### Responsabilidades
