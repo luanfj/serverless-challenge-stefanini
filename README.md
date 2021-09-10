@@ -79,6 +79,6 @@ Os controllers, por sua vez, possui a responsabilidade de extrair os parâmetros
 
 #### Services
 
-Os services são responsáveis por fazer a comunicação com o Banco de Dados e retornar um resultado (ou não) ao Controller.
+Os services são responsáveis pelas regras de negócio e por fazer a comunicação com o Banco de Dados e retornar um resultado (ou não) ao Controller.
 
-Nesta versão as regras de negócio estão embutidas nos services, porém o ideal seria ter uma lógica separada ao qual seu unico foco fosse trabalhar as regras de negócio do módulo.
+Por ser um projeto relativamente simples (em termos de rregras de negócio) não vi a necessidade de separar as tarefas dos services, porém para uma estrutura mais "Clean", os services poderiam cuidar apenas das regras de negócio, enquanto um diretório chamado "Repository" poderia ser responsável por gerenciar os dados no banco de dados
