@@ -81,4 +81,4 @@ Os controllers, por sua vez, possui a responsabilidade de extrair os parâmetros
 
 Os services são responsáveis pelas regras de negócio e por fazer a comunicação com o Banco de Dados e retornar um resultado (ou não) ao Controller.
 
-Por ser um projeto relativamente simples (em termos de rregras de negócio) não vi a necessidade de separar as tarefas dos services, porém para uma estrutura mais "Clean", os services poderiam cuidar apenas das regras de negócio, enquanto um diretório chamado "Repository" poderia ser responsável por gerenciar os dados no banco de dados
+Por ser um projeto relativamente simples (em termos de regras de negócio) não vi a necessidade de separar as tarefas dos services, porém para uma estrutura mais "Clean", os services poderiam cuidar apenas das regras de negócio, enquanto um diretório chamado "Repository" poderia ser responsável por gerenciar os dados no banco de dados
